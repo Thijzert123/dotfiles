@@ -41,3 +41,22 @@ style = "minimal"
 
 [brightness]
 enable_ddcutil = true
+
+[control_center]
+sidebar = "full"
+sidebar_section = "none"
+
+[[control_center.shortcuts]]
+type = "caffeine"
+
+[[control_center.shortcuts]]
+type = "notification"
+
+[[control_center.shortcuts]]
+type = "nightlight"
+
+[[control_center.shortcuts]]
+type = "keyboard_layout"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
