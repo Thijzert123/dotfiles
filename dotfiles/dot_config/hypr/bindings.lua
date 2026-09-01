@@ -4,7 +4,7 @@ local lpfx = "uwsm app -- "
 
 -- Core binds
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(nipc .. "panel-toggle launcher"))
-hl.bind(mainMod .. " + Caps_Lock", hl.dsp.exec_cmd(nipc .. "panel-toggle session"))
+hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd(nipc .. "panel-toggle session"))
 hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(nipc .. "panel-toggle control-center"))
 hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(nipc .. "settings-toggle"))
 hl.bind("ALT + Tab", hl.dsp.exec_cmd(nipc .. "window-switcher"))
