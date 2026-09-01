@@ -3,14 +3,101 @@ local nipc = "noctalia msg "
 local lpfx = "uwsm app -- "
 
 -- Core binds
-hl.bind(mainMod .. "+Space", hl.dsp.exec_cmd(nipc .. "panel-toggle launcher"))
-hl.bind(mainMod .. "+S", hl.dsp.exec_cmd(nipc .. "panel-toggle control-center"))
-hl.bind(mainMod .. "+comma", hl.dsp.exec_cmd(nipc .. "settings-toggle"))
+hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(nipc .. "panel-toggle launcher"))
+hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(nipc .. "panel-toggle control-center"))
+hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(nipc .. "settings-toggle"))
 hl.bind("ALT + Tab", hl.dsp.exec_cmd(nipc .. "window-switcher"))
 
+hl.bind("SUPER + RETURN", hl.dsp.exec_cmd("uwsm app -- foot"))
+hl.bind("SUPER + SHIFT + RETURN", hl.dsp.exec_cmd("uwsm app -- firefox"))
+hl.bind("SUPER + SHIFT + F", hl.dsp.exec_cmd("uwsm app -- nautilus"))
+hl.bind("SUPER + SHIFT + B", hl.dsp.exec_cmd("uwsm app -- firefox"))
+hl.bind("SUPER + SHIFT + ALT + B", hl.dsp.exec_cmd("uwsm app -- firefox --private-window"))
+hl.bind("SUPER + SHIFT + M", hl.dsp.exec_cmd("uwsm app -- spotify"))
+
+hl.bind("SUPER + W", hl.dsp.window.close())
+hl.bind("SUPER + Q", hl.dsp.window.close())
+
+hl.bind("SUPER + J", hl.dsp.layout("togglesplit"))
+hl.bind("SUPER + P", hl.dsp.window.pseudo())
+hl.bind("SUPER + T", hl.dsp.window.float({ action = "toggle" }))
+hl.bind("SUPER + F", hl.dsp.window.fullscreen_state({ internal = 2, client = 0, action = "toggle" }))
+hl.bind("SUPER + ALT + F", hl.dsp.window.fullscreen({ mode = "maximized" }))
+
+hl.bind("SUPER + LEFT", hl.dsp.focus({ direction = "l" }))
+hl.bind("SUPER + RIGHT", hl.dsp.focus({ direction = "r" }))
+hl.bind("SUPER + UP", hl.dsp.focus({ direction = "u" }))
+hl.bind("SUPER + DOWN", hl.dsp.focus({ direction = "d" }))
+
+-- Toggle scratchpad
+hl.bind("SUPER + S", hl.dsp.workspace.toggle_special("scratchpad"))
+-- Move window to scratchpad
+hl.bind("SUPER + ALT + S", hl.dsp.window.move({ workspace = "special:scratchpad", follow = false }))
+hl.bind("SUPER + grave", hl.dsp.workspace.toggle_special("scratchpad"))
+hl.bind("SUPER + SHIFT + grave", hl.dsp.window.move({ workspace = "special:scratchpad", follow = false }))
+
+-- Multiple monitor binds
+hl.bind("SUPER + TAB", hl.dsp.focus({ monitor = "+1" }))
+hl.bind("SUPER + SHIFT + TAB", hl.dsp.window.move({ monitor = "+1" }))
+hl.bind("SUPER + SHIFT + ALT + TAB", hl.dsp.window.move({ monitor = "+1", follow = false }))
+
+-- Shrink windows up/down/left/right
+hl.bind("SUPER + code:20", hl.dsp.window.resize({ x = -100, y = 0, relative = true }))
+hl.bind("SUPER + code:21", hl.dsp.window.resize({ x = 100, y = 0, relative = true }))
+hl.bind("SUPER + SHIFT + code:20", hl.dsp.window.resize({ x = 0, y = -100, relative = true }))
+hl.bind("SUPER + SHIFT + code:21", hl.dsp.window.resize({ x = 0, y = 100, relative = true }))
+
+hl.bind("SUPER + ALT + code:20", hl.dsp.window.resize({ x = -25, y = 0, relative = true }))
+hl.bind("SUPER + ALT + code:21", hl.dsp.window.resize({ x = 25, y = 0, relative = true }))
+hl.bind("SUPER + SHIFT + ALT + code:20", hl.dsp.window.resize({ x = 0, y = -25, relative = true }))
+hl.bind("SUPER + SHIFT + ALT + code:21", hl.dsp.window.resize({ x = 0, y = 25, relative = true }))
+
+hl.bind("SUPER + CTRL + code:20", hl.dsp.window.resize({ x = -300, y = 0, relative = true }))
+hl.bind("SUPER + CTRL + code:21", hl.dsp.window.resize({ x = 300, y = 0, relative = true }))
+hl.bind("SUPER + CTRL + SHIFT + code:20", hl.dsp.window.resize({ x = 0, y = -300, relative = true }))
+hl.bind("SUPER + CTRL + SHIFT + code:21", hl.dsp.window.resize({ x = 0, y = 300, relative = true }))
+
+hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
+
+hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
+hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+-- Toggle grouping
+hl.bind("SUPER + G", hl.dsp.group.toggle())
+-- Move active window out of group
+hl.bind("SUPER + ALT + G", hl.dsp.window.move({ out_of_group = true }))
+
+-- Move window to group in left/right/top/bottom
+hl.bind("SUPER + ALT + LEFT", hl.dsp.window.move({ into_group = "l" }))
+hl.bind("SUPER + ALT + RIGHT", hl.dsp.window.move({ into_group = "r" }))
+hl.bind("SUPER + ALT + UP", hl.dsp.window.move({ into_group = "u" }))
+hl.bind("SUPER + ALT + DOWN", hl.dsp.window.move({ into_group = "d" }))
+
+-- Next/previous window in group
+hl.bind("SUPER + ALT + TAB", hl.dsp.group.next())
+hl.bind("SUPER + ALT + SHIFT + TAB", hl.dsp.group.prev())
+
+-- Move grouped window focus left/right
+hl.bind("SUPER + CTRL + LEFT", hl.dsp.group.prev())
+hl.bind("SUPER + CTRL + RIGHT", hl.dsp.group.next())
+
+-- Next/previous window in group
+hl.bind("SUPER + ALT + mouse_down", hl.dsp.group.next())
+hl.bind("SUPER + ALT + mouse_up", hl.dsp.group.prev())
+
+-- Switch to group window _index_
+for index = 1, 5 do
+  hl.bind("SUPER + ALT + code:" .. tostring(index + 9), hl.dsp.group.active({ index = index }))
+end
+
 -- Media keys
-hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(nipc .. "volume-up"))
-hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(nipc .. "volume-down"))
-hl.bind("XF86AudioMute", hl.dsp.exec_cmd(nipc .. "volume-mute"))
-hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(nipc .. "brightness-up"))
-hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(nipc .. "brightness-down"))
+hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(nipc .. "volume-up"), { locked = true, repeating = true })
+hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(nipc .. "volume-down"), { locked = true, repeating = true })
+hl.bind("XF86AudioMute", hl.dsp.exec_cmd(nipc .. "volume-mute"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessUp", hl.dsp.exec_cmd(nipc .. "brightness-up"), { locked = true, repeating = true })
+hl.bind("XF86MonBrightnessDown", hl.dsp.exec_cmd(nipc .. "brightness-down"), { locked = true, repeating = true })
+hl.bind("XF86AudioNext",  hl.dsp.exec_cmd(nipc .. "media next"), { locked = true })
+hl.bind("XF86AudioPause", hl.dsp.exec_cmd(nipc .. "playerctl toggle"), { locked = true })
+hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd(nipc .. "playerctl toggle"), { locked = true })
+hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd(nipc .. "media previous"), { locked = true })
