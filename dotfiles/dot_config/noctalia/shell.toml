@@ -1,0 +1,43 @@
+[shell]
+external_ip_enabled = true
+screen_time_enabled = true
+date_format = "%A, %B %d"
+corner_radius_scale = 0.3
+launch_apps_as_systemd_services = true
+
+[shell.animation]
+enabled = false
+
+[shell.panel]
+open_near_click_control_center = true
+open_near_click_wallpaper = true
+
+[osd.kinds]
+media = false
+
+[location]
+auto_locate = true
+
+[bar.default]
+margin_ends = 0
+radius = 0
+end = [
+  "media",
+  "spacer_3",
+  "tray",
+  "bluetooth",
+  "volume",
+  "brightness",
+  "spacer_2",
+  "battery",
+  "control-center",
+  "session"
+]
+
+[widget.workspaces]
+change_color_on_hover = false
+label_source = "name"
+style = "minimal"
+
+[brightness]
+enable_ddcutil = true
