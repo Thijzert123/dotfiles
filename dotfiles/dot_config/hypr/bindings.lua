@@ -8,12 +8,12 @@ hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(nipc .. "panel-toggle control-ce
 hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(nipc .. "settings-toggle"))
 hl.bind("ALT + Tab", hl.dsp.exec_cmd(nipc .. "window-switcher"))
 
-hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd("uwsm app -- foot"))
-hl.bind(mainMod .. " + SHIFT + RETURN", hl.dsp.exec_cmd("uwsm app -- firefox"))
-hl.bind(mainMod .. " + SHIFT + F", hl.dsp.exec_cmd("uwsm app -- nautilus"))
-hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd("uwsm app -- firefox"))
-hl.bind(mainMod .. " + SHIFT + ALT + B", hl.dsp.exec_cmd("uwsm app -- firefox --private-window"))
-hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("uwsm app -- spotify"))
+hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(lpfx .. "foot"))
+hl.bind(mainMod .. " + SHIFT + RETURN", hl.dsp.exec_cmd(lpfx .. "firefox"))
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.exec_cmd(lpfx .. "nautilus"))
+hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd(lpfx .. "firefox"))
+hl.bind(mainMod .. " + SHIFT + ALT + B", hl.dsp.exec_cmd(lpfx .. "firefox --private-window"))
+hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd(lpfx .. "spotify"))
 
 hl.bind(mainMod .. " + W", hl.dsp.window.close())
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
