@@ -3,7 +3,7 @@ builtin = "Ayu"
 
 [theme.templates]
 builtin_ids = [ "btop", "foot", "gtk3", "gtk4", "helix", "hyprland", "kcolorscheme", "qt", "startship" ]
-community_ids = [ "fzf" ]
+community_ids = [ "fzf", "prismlauncher" ]
 
 [wallpaper]
 directory = "~/.local/share/wallpapers"
