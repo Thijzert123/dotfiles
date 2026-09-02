@@ -1,6 +1,9 @@
 [theme]
 builtin = "Ayu"
 
+[theme.templates]
+builtin_ids = [ "btop", "foot", "gtk3", "gtk4", "helix", "hyprland", "kcolorscheme", "qt", "startship" ]
+
 [wallpaper]
 directory = "~/.local/share/wallpapers"
 
