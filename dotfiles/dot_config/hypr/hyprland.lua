@@ -10,32 +10,32 @@ hl.monitor({ output = "DP-2", mode = "preferred", position = "1920x0", scale = "
 hl.monitor({ output = "DP-3", mode = "preferred", position = "0x0", scale = "1" })
 
 hl.window_rule({
-    match = { class = "dev.noctalia.Noctalia" },
-    float = true,
-    size = { 1080, 920 },
+  match = { class = "dev.noctalia.Noctalia" },
+  float = true,
+  size = { 1080, 920 },
 })
 
 hl.window_rule({
-    -- Ignore maximize requests from all apps. You'll probably like this.
-    name  = "suppress-maximize-events",
-    match = { class = ".*" },
+  -- Ignore maximize requests from all apps. You'll probably like this.
+  name  = "suppress-maximize-events",
+  match = { class = ".*" },
 
-    suppress_event = "maximize",
+  suppress_event = "maximize",
 })
 
 hl.window_rule({
-    -- Fix some dragging issues with XWayland
-    name  = "fix-xwayland-drags",
-    match = {
-        class      = "^$",
-        title      = "^$",
-        xwayland   = true,
-        float      = true,
-        fullscreen = false,
-        pin        = false,
-    },
+  -- Fix some dragging issues with XWayland
+  name  = "fix-xwayland-drags",
+  match = {
+      class      = "^$",
+      title      = "^$",
+      xwayland   = true,
+      float      = true,
+      fullscreen = false,
+      pin        = false,
+  },
 
-    no_focus = true,
+  no_focus = true,
 })
 
 hl.layer_rule({
@@ -60,6 +60,9 @@ hl.config({
     kb_layout = "us,us",
     kb_variant = "basic,intl",
     kb_options = "caps:swapescape", -- caps:escpae or caps:swapescape
+    repeat_rate = 40,
+    repeat_delay = 250,
+    numlock_by_default = true,
   },
 
   decoration = {
