@@ -39,6 +39,12 @@ change_color_on_hover = false
 label_source = "name"
 style = "minimal"
 
+[widget.spacer_2]
+type = "spacer"
+
+[widget.spacer_3]
+type = "spacer"
+
 [brightness]
 enable_ddcutil = true
 
