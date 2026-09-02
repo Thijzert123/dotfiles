@@ -110,6 +110,7 @@ hl.config({
       gradient_rounding = 0,
       gradient_round_only_edges = false,
     },
+    },
 
   ecosystem = {
     no_update_news = true,
