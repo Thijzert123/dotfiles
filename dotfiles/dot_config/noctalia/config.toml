@@ -1,3 +1,9 @@
+[theme]
+builtin = "Ayu"
+
+[wallpaper]
+directory = "~/.local/share/wallpapers"
+
 [shell]
 external_ip_enabled = true
 screen_time_enabled = true
