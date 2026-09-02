@@ -3,6 +3,7 @@
 
 
 ##### ENVS ######
+source ~/.config/fzf/themes/noctalia.sh
 export PATH="$PATH:~/.cargo/bin"
 export EDITOR="helix"
 
