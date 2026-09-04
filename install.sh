@@ -56,7 +56,7 @@ echo "==> Setting GTK theme..."
 gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'
 
 echo "==> Cloning dotfiles..."
-chezmoi init --ssh Thijzert123
+chezmoi init --apply git@github.com:Thijzert123/dotfiles.git
 
 echo "==> Installing hyprland plugins..."
 mkdir -p ~/.config/hypr/plugins
