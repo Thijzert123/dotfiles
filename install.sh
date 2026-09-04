@@ -48,7 +48,7 @@ git clone https://aur.archlinux.org/yay.git /tmp/yay
 cd /tmp/yay
 makepkg -si
 
-echo "==> Installing AUR packages"
+echo "==> Installing AUR packages..."
 yay --noconfirm --needed -S \
   qt6ct-kde
 
