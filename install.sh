@@ -38,7 +38,7 @@ sudo pacman --noconfirm --needed -S \
   uwsm \
   wireplumber \
   xdg-desktop-portal-hyprland \
-  zoxide \
+  zoxide
 
 echo "==> Enabling services..."
 sudo systemctl enable NetworkManager.service bluetooth.service
