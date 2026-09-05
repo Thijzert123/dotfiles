@@ -46,10 +46,16 @@ sudo pacman --noconfirm --needed -S \
   signal-desktop \
   vlc \
   obs-studio \
-  video-downloader
+  video-downloader \
+  accountsservice \
+  greetd
 
 echo "==> Enabling services..."
-sudo systemctl enable NetworkManager.service bluetooth.service
+sudo systemctl enable \
+  NetworkManager.service \
+  bluetooth.service \
+  accounts-daemon.service \
+  greetd.service
 
 echo "==> Installing Rust..."
 rustup toolchain install stable
@@ -63,10 +69,14 @@ echo "==> Installing AUR packages..."
 yay --noconfirm --needed -S \
   qt6ct-kde \
   localsend-bin \
-  spotify
+  spotify \
+  noctalia-greeter
 
 echo "==> Setting GTK theme..."
 gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'
+
+echo "==> Installing greeter..."
+sudo sed -i 's|^command = .*|command = "/usr/bin/noctalia-greeter-session"|' /etc/greetd/config.toml
 
 echo "==> Cloning dotfiles..."
 chezmoi init --apply git@github.com:Thijzert123/dotfiles.git
