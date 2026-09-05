@@ -56,6 +56,11 @@ hl.config({
     border_size = 2,
   },
 
+  dwindle = {
+    preserve_split = true,
+    force_split = 2,
+  },
+
   input = {
     kb_layout = "us,us",
     kb_variant = "basic,intl",
