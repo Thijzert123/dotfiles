@@ -1,7 +1,12 @@
 #!/bin/bash
 
+echo "==> Enabling multilib..."
+sudo sed -i \
+  -e '/^[[:space:]]*#\[multilib\]/,/^[[:space:]]*#Include/ s/^[[:space:]]*#//' \
+  /etc/pacman.conf
+
 echo "==> Installing pacman packages..."
-sudo pacman --noconfirm --needed -S \
+sudo pacman --noconfirm --needed -Syu \
   accountsservice \
   adw-gtk-theme \
   base-devel \
@@ -43,6 +48,7 @@ sudo pacman --noconfirm --needed -S \
   rustup \
   signal-desktop \
   starship \
+  steam \
   tldr \
   tree \
   ttf-jetbrains-mono-nerd \
