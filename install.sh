@@ -32,6 +32,7 @@ sudo pacman --noconfirm --needed -S \
   qt5-wayland \
   qt6-multimedia-gstreamer \
   qt6-wayland \
+  rustup \
   starship \
   tree \
   ttf-jetbrains-mono-nerd \
@@ -42,6 +43,9 @@ sudo pacman --noconfirm --needed -S \
 
 echo "==> Enabling services..."
 sudo systemctl enable NetworkManager.service bluetooth.service
+
+echo "==> Installing Rust..."
+rustup toolchain install stable
 
 echo "==> Installing yay..."
 git clone https://aur.archlinux.org/yay.git /tmp/yay
