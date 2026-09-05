@@ -2,6 +2,7 @@
 
 echo "==> Installing pacman packages..."
 sudo pacman --noconfirm --needed -S \
+  accountsservice \
   adw-gtk-theme \
   base-devel \
   bash-completion \
@@ -15,16 +16,21 @@ sudo pacman --noconfirm --needed -S \
   fzf \
   gdu \
   git \
+  greetd \
   helix \
   hyprland \
   kdenlive \
+  krita \
   less \
   libreoffice-fresh \
+  nautilus \
   networkmanager \
   noctalia \
   noto-fonts \
   nwg-look \
+  obs-studio \
   openssh \
+  pinta \
   pipewire \
   pipewire-jack \
   power-profiles-daemon \
@@ -33,29 +39,23 @@ sudo pacman --noconfirm --needed -S \
   qt6-multimedia-gstreamer \
   qt6-wayland \
   rustup \
+  signal-desktop \
   starship \
   tree \
   ttf-jetbrains-mono-nerd \
   uwsm \
+  video-downloader \
+  vlc \
   wireplumber \
   xdg-desktop-portal-hyprland \
-  zoxide \
-  krita \
-  nautilus \
-  pinta \
-  signal-desktop \
-  vlc \
-  obs-studio \
-  video-downloader \
-  accountsservice \
-  greetd
+  zoxide
 
 echo "==> Enabling services..."
 sudo systemctl enable \
-  NetworkManager.service \
-  bluetooth.service \
   accounts-daemon.service \
-  greetd.service
+  bluetooth.service \
+  greetd.service \
+  NetworkManager.service
 
 echo "==> Installing Rust..."
 rustup toolchain install stable
@@ -67,10 +67,10 @@ makepkg -si
 
 echo "==> Installing AUR packages..."
 yay --noconfirm --needed -S \
-  qt6ct-kde \
   localsend-bin \
-  spotify \
-  noctalia-greeter
+  noctalia-greeter \
+  qt6ct-kde \
+  spotify
 
 echo "==> Setting GTK theme..."
 gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'
