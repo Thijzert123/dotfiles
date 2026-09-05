@@ -8,6 +8,9 @@ community_ids = [ "fzf", "prismlauncher" ]
 [wallpaper]
 directory = "~/.local/share/wallpapers"
 
+[wallpaper.default]
+path = "~/.local/share/wallpapers/botw.jpeg"
+
 [shell]
 setup_wizard_enabled = false
 external_ip_enabled = true
