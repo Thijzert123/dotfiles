@@ -39,7 +39,14 @@ sudo pacman --noconfirm --needed -S \
   uwsm \
   wireplumber \
   xdg-desktop-portal-hyprland \
-  zoxide
+  zoxide \
+  krita \
+  nautilus \
+  pinta \
+  signal-desktop \
+  vlc \
+  obs-studio \
+  video-downloader
 
 echo "==> Enabling services..."
 sudo systemctl enable NetworkManager.service bluetooth.service
@@ -54,7 +61,9 @@ makepkg -si
 
 echo "==> Installing AUR packages..."
 yay --noconfirm --needed -S \
-  qt6ct-kde
+  qt6ct-kde \
+  localsend-bin \
+  spotify
 
 echo "==> Setting GTK theme..."
 gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'
