@@ -9,6 +9,7 @@ community_ids = [ "fzf", "prismlauncher" ]
 directory = "~/.local/share/wallpapers"
 
 [shell]
+setup_wizard_enabled = false
 external_ip_enabled = true
 screen_time_enabled = true
 date_format = "%A, %B %d"
@@ -23,6 +24,9 @@ enabled = false
 [shell.panel]
 open_near_click_control_center = true
 open_near_click_wallpaper = true
+
+[shell.greeter_sync]
+auto_sync = true
 
 [osd.kinds]
 media = false
