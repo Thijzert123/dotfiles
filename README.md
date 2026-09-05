@@ -7,3 +7,14 @@ Run `install.sh` as the user you want to configure the dotfiles for on a fresh `
 ```
 curl -fsSL https://github.com/Thijzert123/dotfiles/raw/refs/heads/main/install.sh | bash
 ```
+
+## TODO
+````
+chezmoi init --promptString email=you@example.com --apply
+```
+or
+```
+[user]
+    name = Your Name
+    email = {{ promptString "email" }}
+```
