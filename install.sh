@@ -1,5 +1,18 @@
 #!/bin/bash
 
+USERNAME=$(whoami)
+
+echo "==> Disabling sudo password for the duration of this script..."
+TEMP_SUDO="/etc/sudoers.d/Thijzert123-dotfiles-installation-temp"
+cleanup() {
+    rm -f "$TEMP_SUDO"
+}
+trap cleanup EXIT
+printf '%s ALL=(ALL:ALL) NOPASSWD: ALL\n' "$USERNAME" \
+    > "$TEMP_SUDO"
+chmod 0440 "$TEMP_SUDO"
+visudo -cf "$TEMP_SUDO"
+
 echo "==> Enabling multilib..."
 sudo sed -i \
   -e '/^[[:space:]]*#\[multilib\]/,/^[[:space:]]*#Include/ s/^[[:space:]]*#//' \
@@ -87,8 +100,7 @@ gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'
 
 echo "==> Installing greeter..."
 sudo sed -i 's|^command = .*|command = "/usr/bin/noctalia-greeter-session"|' /etc/greetd/config.toml
-USER_TO_USE=$(whoami)
-sudo noctalia-greeter passwordless-sync enable $USER_TO_USE
+sudo noctalia-greeter passwordless-sync enable $USERNAME
 
 echo "==> Cloning dotfiles..."
 chezmoi init --apply git@github.com:Thijzert123/dotfiles.git
