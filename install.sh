@@ -37,6 +37,7 @@ sudo pacman --noconfirm --needed -Syu \
   fzf \
   gdu \
   git \
+  meld \
   greetd \
   helix \
   hyprland \
@@ -85,6 +86,9 @@ sudo systemctl enable \
 
 echo "==> Installing Rust..."
 rustup toolchain install stable
+
+echo "==> Updating tldr cache..."
+tldr --update
 
 echo "==> Installing yay..."
 git clone https://aur.archlinux.org/yay.git /tmp/yay
