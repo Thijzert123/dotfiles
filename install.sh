@@ -26,6 +26,9 @@ sudo pacman --noconfirm --needed -Syu \
   bash-completion \
   bluez \
   btop \
+  ripgrep \
+  bat \
+  fd \
   chezmoi \
   ddcutil \
   eza \

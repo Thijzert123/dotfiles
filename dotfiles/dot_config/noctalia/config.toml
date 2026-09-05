@@ -3,7 +3,7 @@ builtin = "Ayu"
 
 [theme.templates]
 builtin_ids = [ "btop", "foot", "gtk3", "gtk4", "helix", "hyprland", "kcolorscheme", "qt", "starship" ]
-community_ids = [ "fzf", "prismlauncher" ]
+community_ids = [ "fzf", "prismlauncher", "bat" ]
 
 [wallpaper]
 directory = "~/.local/share/wallpapers"
@@ -33,6 +33,9 @@ auto_sync = true
 
 [osd.kinds]
 media = false
+
+[plugins]
+enabled = [ "kenn/keybind-cheatsheet" ]
 
 [location]
 auto_locate = true
