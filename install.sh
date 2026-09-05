@@ -56,6 +56,7 @@ sudo pacman --noconfirm --needed -S \
 echo "==> Enabling services..."
 sudo systemctl enable \
   accounts-daemon.service \
+  avahi-daemon.service \
   bluetooth.service \
   greetd.service \
   NetworkManager.service
