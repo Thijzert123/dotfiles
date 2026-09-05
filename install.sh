@@ -23,6 +23,8 @@ sudo pacman --noconfirm --needed -S \
   krita \
   less \
   libreoffice-fresh \
+  man \
+  man-db \
   nautilus \
   networkmanager \
   noctalia \
@@ -41,6 +43,7 @@ sudo pacman --noconfirm --needed -S \
   rustup \
   signal-desktop \
   starship \
+  tldr \
   tree \
   ttf-jetbrains-mono-nerd \
   uwsm \
