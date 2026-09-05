@@ -58,6 +58,9 @@ alias gcm='git commit -m'
 alias gcam='git commit -a -m'
 alias gcad='git commit -a --amend'
 
+# Misc
+alias tree='tree -C'
+
 ##### SETUPS #####
 eval "$(zoxide init bash)"
 eval "$(starship init bash)"
