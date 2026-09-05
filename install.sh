@@ -77,6 +77,8 @@ gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'
 
 echo "==> Installing greeter..."
 sudo sed -i 's|^command = .*|command = "/usr/bin/noctalia-greeter-session"|' /etc/greetd/config.toml
+USER_TO_USE=$(whoami)
+sudo noctalia-greeter passwordless-sync enable $USER_TO_USE
 
 echo "==> Cloning dotfiles..."
 chezmoi init --apply git@github.com:Thijzert123/dotfiles.git
