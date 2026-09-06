@@ -24,32 +24,22 @@ echo "==> Installing pacman packages..."
 sudo pacman --noconfirm --needed --quiet -Syu \
   accountsservice \
   adw-gtk-theme \
-  bash-language-server \
-  vscode-json-languageserver \
-  wl-clipboard \
-  lua-language-server \
-  marksman \
-  markdown-oxide \
-  systemd-lsp \
-  taplo \
-  tombi \
-  lldb \
   base-devel \
   bash-completion \
+  bash-language-server \
+  bat \
   bluez \
   btop \
-  ripgrep \
-  bat \
-  fd \
   chezmoi \
   ddcutil \
+  discord \
   eza \
+  fd \
   firefox \
   foot \
   fzf \
   gdu \
   git \
-  meld \
   greetd \
   helix \
   hyprland \
@@ -57,8 +47,13 @@ sudo pacman --noconfirm --needed --quiet -Syu \
   krita \
   less \
   libreoffice-fresh \
+  lldb \
+  lua-language-server \
   man \
   man-db \
+  markdown-oxide \
+  marksman \
+  meld \
   nautilus \
   networkmanager \
   noctalia \
@@ -74,17 +69,23 @@ sudo pacman --noconfirm --needed --quiet -Syu \
   qt5-wayland \
   qt6-multimedia-gstreamer \
   qt6-wayland \
+  ripgrep \
   rustup \
   signal-desktop \
   starship \
   steam \
+  systemd-lsp \
+  taplo \
   tldr \
+  tombi \
   tree \
   ttf-jetbrains-mono-nerd \
   uwsm \
   video-downloader \
   vlc \
+  vscode-json-languageserver \
   wireplumber \
+  wl-clipboard \
   xdg-desktop-portal-hyprland \
   zoxide \
   >/dev/null
