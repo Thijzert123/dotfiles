@@ -12,3 +12,4 @@ curl -fsSL https://github.com/Thijzert123/dotfiles/raw/refs/heads/main/install.s
 - https://docs.noctalia.dev/noctalia/configuration/shell/?section=encrypted-storage-master-key#encrypted-storage-master-key
 - Fix caps lock being esc in games
 - Update checker plugin?
+- Fix chezmoi initial init and makepkg first run during installation
