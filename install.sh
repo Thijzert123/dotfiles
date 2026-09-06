@@ -80,6 +80,7 @@ sudo pacman --noconfirm --needed --quiet -Syu \
   tombi \
   tree \
   ttf-jetbrains-mono-nerd \
+  unzip \
   uwsm \
   video-downloader \
   vlc \
@@ -87,6 +88,7 @@ sudo pacman --noconfirm --needed --quiet -Syu \
   wireplumber \
   wl-clipboard \
   xdg-desktop-portal-hyprland \
+  zip \
   zoxide \
   >/dev/null
 
