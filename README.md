@@ -7,3 +7,8 @@ Run `install.sh` as the user you want to configure the dotfiles for on a fresh `
 ```
 curl -fsSL https://github.com/Thijzert123/dotfiles/raw/refs/heads/main/install.sh | bash
 ```
+
+## Todo
+- https://docs.noctalia.dev/noctalia/configuration/shell/?section=encrypted-storage-master-key#encrypted-storage-master-key
+- Fix caps lock being esc in games
+- Update checker plugin?
