@@ -7,7 +7,7 @@ Run `install.sh` as the user you want to configure the dotfiles for on a fresh `
 ```
 curl -fsSL https://github.com/Thijzert123/dotfiles/raw/refs/heads/main/install.sh | bash
 ```
-Press `Noctalia Settings > Security > Greeter > Noctalia Greeter > Sync Now` to update the greeter theme.
+Click `Noctalia Settings > Security > Greeter > Noctalia Greeter > Sync Now` to update the greeter theme.
 
 To update dotfiles, initialize this repository again with `chezmoi`.
 
