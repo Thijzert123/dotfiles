@@ -128,7 +128,7 @@ sudo sed -i 's|^command = .*|command = "/usr/bin/noctalia-greeter-session"|' /et
 sudo noctalia-greeter passwordless-sync enable $USERNAME
 
 echo "==> Cloning dotfiles..."
-chezmoi init --apply git@github.com:Thijzert123/dotfiles.git
+chezmoi init --apply --purge --force https://github.com/Thijzert123/dotfiles.git
 
 echo "==> Installing hyprland plugins..."
 mkdir -p ~/.config/hypr/plugins
