@@ -31,6 +31,10 @@ hl.bind("ALT + H", hl.dsp.focus({ direction = "l" }), { description = "Toggle la
 hl.bind("ALT + L", hl.dsp.focus({ direction = "r" }), { description = "Toggle launcher" })
 hl.bind("ALT + K", hl.dsp.focus({ direction = "u" }), { description = "Toggle launcher" })
 hl.bind("ALT + J", hl.dsp.focus({ direction = "d" }), { description = "Toggle launcher" })
+hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "l" }), { description = "Toggle launcher" })
+hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "r" }), { description = "Toggle launcher" })
+hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "u" }), { description = "Toggle launcher" })
+hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "d" }), { description = "Toggle launcher" })
 
 -- Toggle scratchpad
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("scratchpad"), { description = "Toggle launcher" })
