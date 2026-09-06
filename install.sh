@@ -1,17 +1,19 @@
 #!/bin/bash
 
+set -eEo pipefail
+
 USERNAME=$(whoami)
 
-echo "==> Disabling sudo password for the duration of this script..."
-TEMP_SUDO="/etc/sudoers.d/Thijzert123-dotfiles-installation-temp"
-cleanup() {
-    rm -f "$TEMP_SUDO"
-}
-trap cleanup EXIT
-printf '%s ALL=(ALL:ALL) NOPASSWD: ALL\n' "$USERNAME" \
-    > "$TEMP_SUDO"
-chmod 0440 "$TEMP_SUDO"
-visudo -cf "$TEMP_SUDO"
+# echo "==> Disabling sudo password for the duration of this script..."
+# TEMP_SUDO="/etc/sudoers.d/Thijzert123-dotfiles-installation-temp"
+# cleanup() {
+#     rm -f "$TEMP_SUDO"
+# }
+# trap cleanup EXIT
+# printf '%s ALL=(ALL:ALL) NOPASSWD: ALL\n' "$USERNAME" \
+#     > "$TEMP_SUDO"
+# chmod 0440 "$TEMP_SUDO"
+# visudo -cf "$TEMP_SUDO"
 
 echo "==> Enabling multilib..."
 sudo sed -i \
@@ -19,11 +21,12 @@ sudo sed -i \
   /etc/pacman.conf
 
 echo "==> Installing pacman packages..."
-sudo pacman --noconfirm --needed -Syu \
+sudo pacman --noconfirm --needed --quiet -Syu \
   accountsservice \
   adw-gtk-theme \
   bash-language-server \
   vscode-json-languageserver \
+  wl-clipboard \
   lua-language-server \
   marksman \
   markdown-oxide \
@@ -83,7 +86,8 @@ sudo pacman --noconfirm --needed -Syu \
   vlc \
   wireplumber \
   xdg-desktop-portal-hyprland \
-  zoxide
+  zoxide \
+  >/dev/null
 
 echo "==> Enabling services..."
 sudo systemctl enable \
@@ -94,22 +98,23 @@ sudo systemctl enable \
   NetworkManager.service
 
 echo "==> Installing Rust..."
-rustup toolchain install stable
+rustup --quiet toolchain install stable >/dev/null
 
 echo "==> Updating tldr cache..."
-tldr --update
+tldr --update >/dev/null
 
 echo "==> Installing yay..."
-git clone https://aur.archlinux.org/yay.git /tmp/yay
+[ -d /tmp/yay ] || git clone --quiet https://aur.archlinux.org/yay.git /tmp/yay >/dev/null
 cd /tmp/yay
-makepkg -si
+makepkg -si --noconfirm --needed >/dev/null
 
 echo "==> Installing AUR packages..."
-yay --noconfirm --needed -S \
+yay --noconfirm --needed --quiet -S \
   localsend-bin \
   noctalia-greeter \
   qt6ct-kde \
-  spotify
+  spotify \
+  >/dev/null
 
 echo "==> Setting GTK theme..."
 gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'
@@ -124,7 +129,11 @@ chezmoi init --apply git@github.com:Thijzert123/dotfiles.git
 echo "==> Installing hyprland plugins..."
 mkdir -p ~/.config/hypr/plugins
 cd ~/.config/hypr/plugins
-git clone https://github.com/zjeffer/split-monitor-workspaces
+[ -d split-monitor-workspaces ] || git clone --quiet https://github.com/zjeffer/split-monitor-workspaces >/dev/null
 cd split-monitor-workspaces
 # Use hyprland version here
-git fetch -Ppft && git checkout release/0.56.x
+git fetch -Ppft >/dev/null
+git checkout --quiet release/0.56.x >/dev/null
+
+echo
+echo "done"
