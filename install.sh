@@ -2,8 +2,6 @@
 
 set -eEo pipefail
 
-USERNAME=$(whoami)
-
 # echo "==> Disabling sudo password for the duration of this script..."
 # TEMP_SUDO="/etc/sudoers.d/Thijzert123-dotfiles-installation-temp"
 # cleanup() {
@@ -122,7 +120,6 @@ gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'
 
 echo "==> Installing greeter..."
 sudo sed -i 's|^command = .*|command = "/usr/bin/noctalia-greeter-session"|' /etc/greetd/config.toml
-sudo noctalia-greeter passwordless-sync enable $USERNAME
 
 echo "==> Cloning dotfiles..."
 chezmoi init --apply --purge --force https://github.com/Thijzert123/dotfiles.git
