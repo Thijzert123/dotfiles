@@ -22,16 +22,16 @@ hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd(lpfx .. "spotify"), { descrip
 hl.bind(mainMod .. " + W", hl.dsp.window.close(), { description = "Toggle launcher" })
 hl.bind(mainMod .. " + Q", hl.dsp.window.close(), { description = "Toggle launcher" })
 
-hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"), { description = "Toggle launcher" })
+hl.bind(mainMod .. " + N", hl.dsp.layout("togglesplit"), { description = "Toggle launcher" })
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo(), { description = "Toggle launcher" })
 hl.bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }), { description = "Toggle launcher" })
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen_state({ internal = 2, client = 0, action = "toggle" }), { description = "Toggle launcher" })
 hl.bind(mainMod .. " + ALT + F", hl.dsp.window.fullscreen({ mode = "maximized" }), { description = "Toggle launcher" })
 
-hl.bind(mainMod .. " + LEFT", hl.dsp.focus({ direction = "l" }), { description = "Toggle launcher" })
-hl.bind(mainMod .. " + RIGHT", hl.dsp.focus({ direction = "r" }), { description = "Toggle launcher" })
-hl.bind(mainMod .. " + UP", hl.dsp.focus({ direction = "u" }), { description = "Toggle launcher" })
-hl.bind(mainMod .. " + DOWN", hl.dsp.focus({ direction = "d" }), { description = "Toggle launcher" })
+hl.bind("ALT + L", hl.dsp.focus({ direction = "l" }), { description = "Toggle launcher" })
+hl.bind("ALT + H", hl.dsp.focus({ direction = "r" }), { description = "Toggle launcher" })
+hl.bind("ALT + K", hl.dsp.focus({ direction = "u" }), { description = "Toggle launcher" })
+hl.bind("ALT + J", hl.dsp.focus({ direction = "d" }), { description = "Toggle launcher" })
 
 -- Toggle scratchpad
 hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("scratchpad"), { description = "Toggle launcher" })
