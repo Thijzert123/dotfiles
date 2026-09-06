@@ -44,10 +44,10 @@ sudo pacman --noconfirm --needed -Syu \
   kdenlive \
   krita \
   less \
+  lib32-vulkan-radeon \
   libreoffice-fresh \
   lldb \
   lua-language-server \
-  man \
   man-db \
   markdown-oxide \
   marksman \
@@ -83,6 +83,7 @@ sudo pacman --noconfirm --needed -Syu \
   video-downloader \
   vlc \
   vscode-json-languageserver \
+  vulkan-radeon \
   wireplumber \
   wl-clipboard \
   xdg-desktop-portal-hyprland \
