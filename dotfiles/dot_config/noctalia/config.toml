@@ -34,9 +34,6 @@ auto_sync = true
 [osd.kinds]
 media = false
 
-[plugins]
-enabled = [ "kenn/keybind-cheatsheet" ]
-
 [location]
 auto_locate = true
 

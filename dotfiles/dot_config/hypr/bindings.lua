@@ -6,7 +6,6 @@ hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(nipc .. "panel-toggle launcher"),
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd(nipc .. "panel-toggle session"), { description = "Toggle launcher" })
 hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(nipc .. "panel-toggle control-center"), { description = "Toggle launcher" })
 hl.bind(mainMod .. " + period", hl.dsp.exec_cmd(nipc .. "settings-toggle"), { description = "Toggle launcher" })
-hl.bind(mainMod .. " + K", hl.dsp.exec_cmd(nipc .. "panel-toggle kenn/keybind-cheatsheet:cheatsheet"), { description = "Toggle launcher" })
 hl.bind("ALT + TAB", hl.dsp.window.cycle_next(), { description = "Toggle launcher" })
 hl.bind("ALT + SHIFT + TAB", hl.dsp.window.cycle_next({ next = false }), { description = "Toggle launcher" })
 hl.bind("ALT + TAB", hl.dsp.window.bring_to_top(), { description = "Toggle launcher" })
