@@ -14,5 +14,4 @@ To update dotfiles, initialize this repository again with `chezmoi`.
 ## Todo
 - https://docs.noctalia.dev/noctalia/configuration/shell/?section=encrypted-storage-master-key#encrypted-storage-master-key
 - Fix caps lock being esc in games
-- Update checker plugin?
-- Fix chezmoi initial init and makepkg first run during installation
+- Update plugin
