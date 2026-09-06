@@ -21,7 +21,7 @@ sudo sed -i \
   /etc/pacman.conf
 
 echo "==> Installing pacman packages..."
-sudo pacman --noconfirm --needed --quiet -Syu \
+sudo pacman --noconfirm --needed -Syu \
   accountsservice \
   adw-gtk-theme \
   base-devel \
@@ -89,8 +89,7 @@ sudo pacman --noconfirm --needed --quiet -Syu \
   wl-clipboard \
   xdg-desktop-portal-hyprland \
   zip \
-  zoxide \
-  >/dev/null
+  zoxide
 
 echo "==> Enabling services..."
 sudo systemctl enable \
@@ -98,27 +97,25 @@ sudo systemctl enable \
   avahi-daemon.service \
   bluetooth.service \
   greetd.service \
-  NetworkManager.service \
-  >/dev/null
+  NetworkManager.service
 
 echo "==> Installing Rust..."
-rustup --quiet toolchain install stable >/dev/null
+rustup toolchain install stable
 
 echo "==> Updating tldr cache..."
-tldr --update >/dev/null
+tldr --update
 
 echo "==> Installing yay..."
-[ -d /tmp/yay ] || git clone --quiet https://aur.archlinux.org/yay.git /tmp/yay >/dev/null
+[ -d /tmp/yay ] || git clone https://aur.archlinux.org/yay.git /tmp/yay
 cd /tmp/yay
-makepkg -si --noconfirm --needed >/dev/null
+makepkg -si --noconfirm --needed
 
 echo "==> Installing AUR packages..."
-yay --noconfirm --needed --quiet -S \
+yay --noconfirm --needed -S \
   localsend-bin \
   noctalia-greeter \
   qt6ct-kde \
-  spotify \
-  >/dev/null
+  spotify
 
 echo "==> Setting GTK theme..."
 gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'
@@ -133,11 +130,11 @@ chezmoi init --apply --purge --force https://github.com/Thijzert123/dotfiles.git
 echo "==> Installing hyprland plugins..."
 mkdir -p ~/.config/hypr/plugins
 cd ~/.config/hypr/plugins
-[ -d split-monitor-workspaces ] || git clone --quiet https://github.com/zjeffer/split-monitor-workspaces >/dev/null
+[ -d split-monitor-workspaces ] || git clone https://github.com/zjeffer/split-monitor-workspaces
 cd split-monitor-workspaces
 # Use hyprland version here
-git fetch -Ppft >/dev/null
-git checkout --quiet release/0.56.x >/dev/null
+git fetch -Ppft
+git checkout release/0.56.x
 
 echo
 echo "done"
