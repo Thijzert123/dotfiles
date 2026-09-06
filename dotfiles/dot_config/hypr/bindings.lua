@@ -108,5 +108,5 @@ hl.bind("XF86AudioNext",  hl.dsp.exec_cmd(nipc .. "media next"), { locked = true
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd(nipc .. "playerctl toggle"), { locked = true, description = "TODO" })
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd(nipc .. "playerctl toggle"), { locked = true, description = "TODO" })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd(nipc .. "media previous"), { locked = true, description = "TODO" })
-hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd(nipc .. "screenshot-region"))
-hl.bind(mainMod .. " + SHIFT + Print", hl.dsp.exec_cmd(nipc .. "screenshot-fullscreen"))
+hl.bind("Print", hl.dsp.exec_cmd(nipc .. "screenshot-region"))
+hl.bind("SHIFT + Print", hl.dsp.exec_cmd(nipc .. "screenshot-fullscreen"))
