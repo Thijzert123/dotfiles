@@ -22,6 +22,15 @@ echo "==> Installing pacman packages..."
 sudo pacman --noconfirm --needed -Syu \
   accountsservice \
   adw-gtk-theme \
+  bash-language-server \
+  vscode-json-languageserver \
+  lua-language-server \
+  marksman \
+  markdown-oxide \
+  systemd-lsp \
+  taplo \
+  tombi \
+  lldb \
   base-devel \
   bash-completion \
   bluez \
