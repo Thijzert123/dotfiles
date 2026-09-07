@@ -100,6 +100,7 @@ sudo systemctl enable \
 
 echo "==> Installing Rust..."
 rustup toolchain install stable
+rustup component add rust-analyzer
 
 echo "==> Updating tldr cache..."
 tldr --update
