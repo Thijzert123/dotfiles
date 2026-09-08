@@ -1,5 +1,14 @@
 theme = "noctalia"
 
+[editor]
+line-number = "relative"
+end-of-line-diagnostics = "hint"
+cursorline = true
+color-modes = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
