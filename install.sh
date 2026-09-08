@@ -74,6 +74,7 @@ sudo pacman --noconfirm --needed -Syu \
   steam \
   systemd-lsp \
   taplo \
+  tk \
   tldr \
   tombi \
   tree \
