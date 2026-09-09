@@ -56,6 +56,7 @@ sudo pacman --noconfirm --needed -Syu \
   networkmanager \
   noctalia \
   noto-fonts \
+  noto-fonts-cjk \
   nwg-look \
   obs-studio \
   openssh \
