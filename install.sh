@@ -39,6 +39,7 @@ sudo pacman --noconfirm --needed -Syu \
   gdu \
   git \
   greetd \
+  gnome-disk-utility \
   helix \
   hyprland \
   kdenlive \
