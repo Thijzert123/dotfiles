@@ -17,6 +17,7 @@ hl.bind(mainMod .. " + SHIFT + F", hl.dsp.exec_cmd(lpfx .. "nautilus"))
 hl.bind(mainMod .. " + SHIFT + B", hl.dsp.exec_cmd(lpfx .. "firefox"))
 hl.bind(mainMod .. " + SHIFT + ALT + B", hl.dsp.exec_cmd(lpfx .. "firefox --private-window"))
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd(lpfx .. "spotify"))
+hl .bind(mainMod .. " + SHIFT + H", hl.dsp.exec_cmd(lpfx .. "imv -f ~/.local/share/helix-cheatsheet.png"))
 
 hl.bind(mainMod .. " + W", hl.dsp.window.close())
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())

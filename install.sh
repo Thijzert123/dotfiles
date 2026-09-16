@@ -42,6 +42,7 @@ sudo pacman --noconfirm --needed -Syu \
   gnome-disk-utility \
   helix \
   hyprland \
+  imv \
   kdenlive \
   krita \
   less \
