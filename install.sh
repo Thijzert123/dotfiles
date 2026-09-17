@@ -81,6 +81,7 @@ sudo pacman --noconfirm --needed -Syu \
   tldr \
   tombi \
   tree \
+  ty \
   ttf-jetbrains-mono-nerd \
   unzip \
   uwsm \
