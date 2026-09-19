@@ -93,6 +93,7 @@ sudo pacman --noconfirm --needed -Syu \
   wl-clipboard \
   xdg-desktop-portal-hyprland \
   zip \
+  radeontop \
   zoxide
 
 echo "==> Enabling services..."
