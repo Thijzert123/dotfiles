@@ -70,6 +70,10 @@ hl.config({
     numlock_by_default = true,
   },
 
+  cursor = {
+    hide_on_key_press = true,
+  },
+
   decoration = {
     rounding = 2,
 
