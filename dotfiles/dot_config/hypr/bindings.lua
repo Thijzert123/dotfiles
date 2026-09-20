@@ -2,6 +2,25 @@ local mainMod = "SUPER"
 local nipc = "noctalia msg "
 local lpfx = "uwsm app -- "
 
+-- Toggle minimal style without gaps
+local no_gaps = {}
+hl.bind(mainMod .. " + SHIFT + N", function() 
+  local window = hl.get_active_window()
+  if not window then return end
+  local workspace = hl.get_workspace(window.workspace.id)
+  if not workspace then return end
+
+  no_gaps[workspace.id] = not no_gaps[workspace.id]
+
+  hl.workspace_rule({
+    workspace = workspace.id,
+    no_rounding = no_gaps[workspace.id],
+    no_shadow = no_gaps[workspace.id],
+    gaps_in = no_gaps[workspace.id] and 0 or 5,
+    gaps_out = no_gaps[workspace.id] and 0 or 10,
+  })
+end)
+
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(nipc .. "panel-toggle launcher"))
 hl.bind(mainMod .. " + Escape", hl.dsp.exec_cmd(nipc .. "panel-toggle session"))
 hl.bind(mainMod .. " + comma", hl.dsp.exec_cmd(nipc .. "panel-toggle control-center"))
