@@ -11,6 +11,7 @@ export EDITOR="helix"
 
 # File system
 if command -v eza &> /dev/null; then
+  alias l='eza -lh --group-directories-first --icons=auto'
   alias ls='eza -lh --group-directories-first --icons=auto'
   alias lsa='ls -a'
   alias lt='eza --tree --level=2 --long --icons --git'
@@ -64,3 +65,5 @@ alias tree='tree -C'
 ##### SETUPS #####
 eval "$(zoxide init bash)"
 eval "$(starship init bash)"
+
+source /home/thijs/.config/broot/launcher/bash/br
