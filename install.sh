@@ -32,6 +32,7 @@ sudo pacman --noconfirm --needed -Syu \
   ddcutil \
   discord \
   eza \
+  feishin \
   fd \
   firefox \
   foot \
