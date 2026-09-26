@@ -103,7 +103,8 @@ sudo systemctl enable \
   avahi-daemon.service \
   bluetooth.service \
   greetd.service \
-  NetworkManager.service
+  NetworkManager.service \
+  sshd.service
 
 echo "==> Installing Rust..."
 rustup toolchain install stable
