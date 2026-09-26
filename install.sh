@@ -95,7 +95,8 @@ sudo pacman --noconfirm --needed -Syu \
   xdg-desktop-portal-hyprland \
   zip \
   radeontop \
-  zoxide
+  zoxide \
+  sqlitebrowser
 
 echo "==> Enabling services..."
 sudo systemctl enable \
