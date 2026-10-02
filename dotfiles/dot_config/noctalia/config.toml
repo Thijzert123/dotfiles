@@ -3,7 +3,7 @@ builtin = "Ayu"
 
 [theme.templates]
 builtin_ids = [ "btop", "foot", "gtk3", "gtk4", "helix", "hyprland", "kcolorscheme", "qt", "starship" ]
-community_ids = [ "feishin", "fzf", "prismlauncher", "bat" ]
+community_ids = [ "fzf", "prismlauncher", "bat" ]
 
 [wallpaper]
 directory = "~/.local/share/wallpapers"
@@ -52,6 +52,10 @@ end = [
   "control-center",
   "session"
 ]
+
+[widget.volume.actions]
+scroll_down = "volume-down 2"
+scroll_up = "volume-up 2"
 
 [widget.workspaces]
 change_color_on_hover = false
