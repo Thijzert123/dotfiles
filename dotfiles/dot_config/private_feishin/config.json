@@ -3,7 +3,6 @@
 	"enableNeteaseTranslation": false,
 	"global_media_hotkeys": true,
 	"lyrics": [
-		"NetEase",
 		"lrclib.net"
 	],
 	"mediaSession": false,
