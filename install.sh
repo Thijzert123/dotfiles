@@ -28,20 +28,19 @@ sudo pacman --noconfirm --needed -Syu \
   bat \
   bluez \
   btop \
-  wev \
   chezmoi \
   ddcutil \
   discord \
   eza \
-  feishin \
   fd \
+  feishin \
   firefox \
   foot \
   fzf \
   gdu \
   git \
-  greetd \
   gnome-disk-utility \
+  greetd \
   helix \
   hyprland \
   imv \
@@ -72,9 +71,11 @@ sudo pacman --noconfirm --needed -Syu \
   qt5-wayland \
   qt6-multimedia-gstreamer \
   qt6-wayland \
+  radeontop \
   ripgrep \
   rustup \
   signal-desktop \
+  sqlitebrowser \
   starship \
   steam \
   systemd-lsp \
@@ -83,21 +84,20 @@ sudo pacman --noconfirm --needed -Syu \
   tldr \
   tombi \
   tree \
-  ty \
   ttf-jetbrains-mono-nerd \
+  ty \
   unzip \
   uwsm \
   video-downloader \
   vlc \
   vscode-json-languageserver \
   vulkan-radeon \
+  wev \
   wireplumber \
   wl-clipboard \
   xdg-desktop-portal-hyprland \
   zip \
-  radeontop \
-  zoxide \
-  sqlitebrowser
+  zoxide
 
 echo "==> Enabling services..."
 sudo systemctl enable \
