@@ -28,6 +28,7 @@ sudo pacman --noconfirm --needed -Syu \
   bat \
   bluez \
   btop \
+  wev \
   chezmoi \
   ddcutil \
   discord \
