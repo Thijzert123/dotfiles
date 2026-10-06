@@ -79,6 +79,7 @@ sudo pacman --noconfirm --needed -Syu \
   starship \
   steam \
   systemd-lsp \
+  tailscale \
   taplo \
   tk \
   tldr \
@@ -106,7 +107,8 @@ sudo systemctl enable \
   bluetooth.service \
   greetd.service \
   NetworkManager.service \
-  sshd.service
+  sshd.service \
+  tailscaled.service
 
 echo "==> Installing Rust..."
 rustup toolchain install stable
