@@ -82,6 +82,7 @@ sudo pacman --noconfirm --needed -Syu \
   systemd-lsp \
   tailscale \
   taplo \
+  texlab \
   tk \
   tldr \
   tombi \
