@@ -65,5 +65,3 @@ alias tree='tree -C'
 ##### SETUPS #####
 eval "$(zoxide init bash)"
 eval "$(starship init bash)"
-
-source /home/thijs/.config/broot/launcher/bash/br
