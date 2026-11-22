@@ -21,5 +21,5 @@ curl -fsSL https://github.com/Thijzert123/dotfiles/raw/refs/heads/main/install.s
   - `alsa-firmware` (probably not the one)
   - `pavucontrol` (nice but also not what fixed it probably)
   - `pipewire-libcamera` ???
-  - `pipewire-pluse` (might be it, should add to installation script anyway because of general compatibility)
+  - `pipewire-pulse` (might be it, should add to installation script anyway because of general compatibility)
   - `pipewire-alsa` (same as above, but didn't fix it, it was already fixed when installing this)
